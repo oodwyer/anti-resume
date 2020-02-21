@@ -33,13 +33,15 @@ class App extends Component {
                     <Header inverted as="h1">
                       The Anti-Resume Project
                     </Header>
-                      <p >
+                      <p class="paragraph_padded">
                         The goal of this project is to highlight both failures and accomplishments of people at Penn that 
                         wouldn’t normally show up on a resume, and to promote the message that we are more than our resume, 
                         our GPA, our internship, or our job. The Signal is currently sharing anti-resumes of Penn alumni 
                         and students in an effort to promote discussion and reflection on what failure really means.
                       </p>
-                    <Button size="huge">submit an anti resume</Button>
+                    <Button content='Next' icon='right arrow' size="huge" labelPosition='right'>
+                      submit an anti resume
+                    </Button>
                   </Container>
                   
               </Segment>
