@@ -3,20 +3,81 @@ body {
   -moz-font-smoothing: grayscale;
 }
 
-@media only screen and (min-width: 768px) {
+/* All Sizes */
+.ui.container {
+  display: block;
+  max-width: 100% !important;
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
   .ui.container {
-    width: 700px;
-    max-width: 700px;
+    width: auto !important;
+    margin-left: 1em !important;
+    margin-right: 1em !important;
   }
-
-  nav.ui.container .ui.header {
-    float: left;
-    margin-top: 12px;
-    font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  .ui.grid.container {
+    width: auto !important;
   }
+  .ui.relaxed.grid.container {
+    width: auto !important;
+  }
+  .ui.very.relaxed.grid.container {
+    width: auto !important;
+  }
+}
 
-  nav.ui.container .ui.inverted.compact.menu {
-    float: right;
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ui.container {
+    width: 723px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .ui.grid.container {
+    width: calc( 723px  +  2rem ) !important;
+  }
+  .ui.relaxed.grid.container {
+    width: calc( 723px  +  3rem ) !important;
+  }
+  .ui.very.relaxed.grid.container {
+    width: calc( 723px  +  5rem ) !important;
+  }
+}
+
+/* Small Monitor */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ui.container {
+    width: 933px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .ui.grid.container {
+    width: calc( 933px  +  2rem ) !important;
+  }
+  .ui.relaxed.grid.container {
+    width: calc( 933px  +  3rem ) !important;
+  }
+  .ui.very.relaxed.grid.container {
+    width: calc( 933px  +  5rem ) !important;
+  }
+}
+
+/* Large Monitor */
+@media only screen and (min-width: 1200px) {
+  .ui.container {
+    width: 1127px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .ui.grid.container {
+    width: calc( 1127px  +  2rem ) !important;
+  }
+  .ui.relaxed.grid.container {
+    width: calc( 1127px  +  3rem ) !important;
+  }
+  .ui.very.relaxed.grid.container {
+    width: calc( 1127px  +  5rem ) !important;
   }
 }
 
@@ -56,8 +117,8 @@ nav.ui.container .ui.inverted.compact.menu .active.item {
 
 .ui.vertical.segment {
   padding-top: 36px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 300px;
+  padding-right: 300px;
   padding-bottom: 100px;
   height: 100vh;
   font-family: "Avenir Next", Helvetica, Arial, sans-serif;
@@ -83,6 +144,13 @@ nav.ui.container .ui.inverted.compact.menu .active.item {
   font-size: 32px;
   color: rgb(51, 51, 51);
   font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+}
+
+.ui.content.container h3.header {
+  font-size: 20px;
+  color: rgb(51, 51, 51);
+  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  color: #68BBCF
 }
 
 .ui.content.container p {

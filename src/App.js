@@ -22,13 +22,12 @@ class App extends Component {
             <Grid.Row columns={2}>
               <Grid.Column>
                 <Segment vertical textAlign="left">
-                  <Container as="nav">
-                    {/* TODO: fix image embedding in header */}
+                  {/* <Container as="nav">
                     <Header as="h2">
                       <Image circular src='/public/tower.png'/>
                       The Signal
                     </Header>
-                  </Container>
+                  </Container> */}
                   <Container className="content">
                     <Header inverted as="h1">
                       The Anti-Resume Project
@@ -39,9 +38,11 @@ class App extends Component {
                         our GPA, our internship, or our job. The Signal is currently sharing anti-resumes of Penn alumni 
                         and students in an effort to promote discussion and reflection on what failure really means.
                       </p>
-                    <Button content='Next' icon='right arrow' size="huge" labelPosition='right'>
-                      submit an anti resume
-                    </Button>
+                    <Header inverted as="h3">
+                    <a href="https://thesign.al">
+                      SUBMIT AN ANTI-RESUME →
+                    </a>
+                    </Header>
                   </Container>
                   
               </Segment>
