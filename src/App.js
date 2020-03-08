@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from './logo.svg';
 import { 
   Button, 
   Container, 
@@ -8,13 +7,62 @@ import {
   Segment, 
   Image,
   Grid,
+  Embed,
+  Card,
+  Dropdown
 } from "semantic-ui-react";
 import "./App.css";
 
 class App extends Component {
-  render() {
+  state = { activeItem: 'home' }
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  
+    render() {
+    const { activeItem } = this.state
+    
     return (
       <div className="App">
+
+        {/* nav bar 
+            TODO: change weird float property
+        */}
+        <Menu fixed='top' size='large' id="navbar" borderless right secondary>
+          <Container>
+            <Menu.Item id="navbar">
+              <Image size='tiny' src='https://thesign.al/content/images/2017/06/favicon.png' wrapped/>
+            </Menu.Item>
+            <Menu.Item 
+              id="navbaritem"
+              active={activeItem === 'home'}
+              onClick={this.handleItemClick}>
+              Home
+            </Menu.Item>
+            <Menu.Item 
+              id="navbaritem"
+              active={activeItem === 'home'}
+              onClick={this.handleItemClick}>
+              About
+            </Menu.Item>
+            <Menu.Item 
+              id="navbaritem"
+              active={activeItem === 'home'}
+              onClick={this.handleItemClick}>
+              Alumni
+            </Menu.Item>
+            <Menu.Item 
+              id="navbaritem"
+              active={activeItem === 'home'}
+              onClick={this.handleItemClick}>
+              Seniors
+            </Menu.Item>
+            <Menu.Item 
+              id="navbaritem"
+              active={activeItem === 'home'}
+              onClick={this.handleItemClick}>
+              Professors
+            </Menu.Item>
+          </Container>
+        </Menu>
 
         {/* main landing page */}
         <Segment vertical textAlign="left">
@@ -60,8 +108,20 @@ class App extends Component {
         </Segment>
         
         {/* video page */}
-        <Segment vertical textAlign="center">
-
+        <Segment vertical textAlign="center" id="video_segment">
+          <Container className="content" id="video_segment_container">
+            <Header inverted as="h1">
+              More About the Project
+            </Header>
+              <Embed
+                id='Ymfzg7rVZwU'
+                source='youtube'
+              />
+            {/* https://www.youtube.com/watch?v=Ymfzg7rVZwU */}
+              <p class="paragraph_padded_video">
+              This is the video caption this is the video caption this is the video caption.
+              </p>
+          </Container>
         </Segment>
 
         {/* roster */}

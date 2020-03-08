@@ -177,3 +177,37 @@ nav.ui.container .ui.inverted.compact.menu .active.item {
   padding-right: 40px;
   padding-bottom: 40px;
 }
+
+.paragraph_padded_video {
+  padding-top: 60px;
+  padding-right: 60px;
+  padding-bottom: 60px;
+  padding-left: 60px;
+}
+
+#video_segment {
+  background-color: #F8FAFE;
+  padding-right: 60px;
+  padding-bottom: 60px;
+  padding-left: 60px;
+}
+
+#video_segment_container {
+  padding-right: 60px;
+  padding-bottom: 60px;
+  padding-left: 60px;
+}
+
+#navbar {
+  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+#navbaritem {
+  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
