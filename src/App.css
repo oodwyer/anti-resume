@@ -81,38 +81,9 @@ body {
   }
 }
 
+/* segments */
 .ui.inverted.vertical.center.aligned.segment {
   padding-top: 36px;
-}
-
-nav.ui.container .ui.inverted.compact.menu {
-  background-color: rgb(51, 51, 51);
-}
-
-nav.ui.container .ui.inverted.compact.menu .item {
-  padding-bottom: 0;
-}
-
-nav.ui.container .ui.inverted.compact.menu .item {
-  font-size: 16px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-bottom: 14px;
-  margin-left: 16px;
-  margin-right: 16px;
-  border-radius: 0;
-}
-
-nav.ui.container .ui.inverted.compact.menu .active.item {
-  background-color: inherit;
-  border-bottom-color: white;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-}
-
-.ui.inverted.vertical.segment {
-  height: 100vh;
-  background-color: rgb(51, 51, 51);
 }
 
 .ui.vertical.segment {
@@ -172,6 +143,8 @@ nav.ui.container .ui.inverted.compact.menu .active.item {
   color: white;
 }
 
+/* paragraph and text styles  */
+
 .paragraph_padded {
   padding-top: 40px;
   padding-right: 40px;
@@ -184,6 +157,8 @@ nav.ui.container .ui.inverted.compact.menu .active.item {
   padding-bottom: 60px;
   padding-left: 60px;
 }
+
+/* individual styles */
 
 #video_segment {
   background-color: #F8FAFE;
@@ -211,3 +186,48 @@ nav.ui.container .ui.inverted.compact.menu .active.item {
   font-size: 20px;
   font-weight: 600;
 }
+
+#card_landing {
+  max-width: 120%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 290px;
+  min-height: 0px;
+  background: #FFFFFF;
+  padding: 0em;
+  border: none;
+  border-radius: 0.28571429rem;
+  -webkit-box-shadow: 0px 1px 3px 0px #D4D4D5, 0px 0px 0px 1px #D4D4D5;
+          box-shadow: 0px 1px 3px 0px #D4D4D5, 0px 0px 0px 1px #D4D4D5;
+  -webkit-transition: -webkit-box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+  transition: -webkit-box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+  transition: box-shadow 0.1s ease, transform 0.1s ease;
+  transition: box-shadow 0.1s ease, transform 0.1s ease, -webkit-box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+  z-index: '';
+
+  font-family: "Avenir", sans-serif;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  background-color: #f5f5f5;
+  font-weight: 500
+}
+
+footer p {
+  font-family: "Avenir", sans-serif;
+  color: grey;
+}
+

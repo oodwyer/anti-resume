@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 import { 
   Button, 
   Container, 
@@ -9,19 +9,36 @@ import {
   Grid,
   Embed,
   Card,
-  Dropdown
+  Dropdown,
+  Sticky,
+  Icon
 } from "semantic-ui-react";
+import _ from 'lodash'
 import "./App.css";
+import "./Card.css";
 
 class App extends Component {
   state = { activeItem: 'home' }
+  contextRef = createRef()
+  
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  
+  handleToggleDropdownMenu = () => {
+    let newState = Object.assign({}, this.state);
+    if (newState.dropdownMenuStyle.display === "none") {
+      newState.dropdownMenuStyle = { display: "flex" };
+    } else {
+      newState.dropdownMenuStyle = { display: "none" };
+    }
+
+    this.setState(newState);
+  };
   
     render() {
     const { activeItem } = this.state
     
     return (
-      <div className="App">
+      <div className="App" ref={this.contextRef}>
 
         {/* nav bar 
             TODO: change weird float property
@@ -70,12 +87,6 @@ class App extends Component {
             <Grid.Row columns={2}>
               <Grid.Column>
                 <Segment vertical textAlign="left">
-                  {/* <Container as="nav">
-                    <Header as="h2">
-                      <Image circular src='/public/tower.png'/>
-                      The Signal
-                    </Header>
-                  </Container> */}
                   <Container className="content">
                     <Header inverted as="h1">
                       The Anti-Resume Project
@@ -97,7 +108,26 @@ class App extends Component {
               </Grid.Column>
               <Grid.Column>
                 <Segment vertical textAlign="center">
-                  
+                  <Container className="content">
+                    <Card id="card_landing">
+                      <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' wrapped ui={false} />
+                      <Card.Content>
+                        <Card.Header>Matthew</Card.Header>
+                        <Card.Meta>
+                          <span className='date'>Joined in 2015</span>
+                        </Card.Meta>
+                        <Card.Description>
+                          Matthew is a musician living in Nashville.
+                        </Card.Description>
+                      </Card.Content>
+                      <Card.Content extra>
+                        <a>
+                          <Icon name='user' />
+                          22 Friends
+                        </a>
+                      </Card.Content>
+                    </Card>
+                  </Container>
                 </Segment> 
               </Grid.Column>
             </Grid.Row>
@@ -135,13 +165,19 @@ class App extends Component {
         </Segment>
         
         {/* footer */}
-        <Segment vertical as="footer" textAlign="center">
-            Made with ♡ in Philadelphia by{" "}
-            <a href="https://thesign.al">
-              The Signal
-            </a>
-            .
-        </Segment>
+        <Sticky context={this.contextRef}>
+          <footer>
+            <Container>
+              <p>
+                Made with ♡ in Philadelphia by{" "}
+                <a href="https://thesign.al">
+                  The Signal
+                </a>
+                .
+              </p>
+            </Container>
+          </footer>
+        </Sticky>
       </div>
     );
   }
